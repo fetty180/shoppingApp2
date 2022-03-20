@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ShoppingList">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Shoppinglist title here"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            android:layout_marginStart="40dp"
+            />
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="created Date "
+            android:layout_weight="2"
+            android:layout_marginStart="30dp"
+            />
+
+        <ImageButton
+            android:id="@+id/deleteAll"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:layout_marginStart="3dp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout1"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/shoppingListtv"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="Shoppinglist title here"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shoppingListDate"
+            android:gravity="center"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:text="date of the shopping list " />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shoppingListRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout11"
+        android:layout_marginStart="10dp"
+        tools:layout_editor_absoluteY="58dp" />
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:fab_colorPressed="@color/purple_200"
+
+
+        >
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/itemFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorPressed="@color/purple_200"
+            app:fab_icon="@drawable/ic_baseline_view_list_24"
+            app:fab_colorNormal="@color/teal_200"
+            app:fab_size="mini"
+            app:fab_title="add item"
+
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorPressed="@color/purple_200"
+            app:fab_icon="@drawable/ic_baseline_shopping_cart_24"
+            app:fab_colorNormal="@color/teal_200"
+            app:fab_size="mini"
+            app:fab_title="add list"
+            android:id="@+id/listFab"
+
+            />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+
+</RelativeLayout>

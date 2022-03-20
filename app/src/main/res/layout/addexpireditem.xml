@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".addExpiringTask"
+   >
+    <TextView
+        android:id="@+id/AXITV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Item Tha Will ExpireSoon"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        />
+
+    <EditText
+        android:id="@+id/expireItem"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:hint="add expiring item here ..."
+        app:layout_constraintTop_toBottomOf="@+id/AXITV"
+        app:layout_constraintEnd_toStartOf="parent"
+        />
+    <ImageButton
+        android:id="@+id/speach_mic_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_mic_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/expireItem"
+        app:layout_constraintBottom_toBottomOf="@+id/expireItem"
+        android:layout_marginEnd="10dp"
+        />
+
+    <TextView
+        android:id="@+id/set_due_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:drawableRight="@drawable/ic_baseline_calendar_today_24"
+        android:padding="8dp"
+        android:text="set due date     "
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expireItem" />
+
+    <Button
+        android:id="@+id/saveItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expireItem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
